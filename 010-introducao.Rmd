@@ -1,0 +1,23 @@
+# Introdução
+
+Primeiro arquivo com o cabeçalho de nível 1 (#) numerado.
+
+## O início
+
+
+
+### Começando...
+
+:::cursor
+You use a div tip by writing `:::` following by the name that you assigned to it in the CSS after the `div`.
+:::
+
+:::cat
+Gato
+:::
+
+
+
+```r
+1+1
+```
