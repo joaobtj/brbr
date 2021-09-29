@@ -1,35 +1,25 @@
-# Workflow derived from https://github.com/r-lib/actions/tree/master/examples
-# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
-on:
-  push:
-    branches: [main, master]
-
-name: bookdown
-
+name: Render and deploy GitBook
+'on':
+  - push
+  - pull_request
 jobs:
-  bookdown:
-    runs-on: ubuntu-latest
-    container: rocker/verse
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+  build:
+    runs-on: ubuntu-18.04
+    container: rocker/verse:latest
     steps:
-      - uses: actions/checkout@v2
-
-
-
-      - name: Cache bookdown results
-        uses: actions/cache@v2
-        with:
-          path: _bookdown_files
-          key: bookdown-${{ hashFiles('**/*Rmd') }}
-          restore-keys: bookdown-
-
-      - name: Build site
-        run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
-
-      - name: Deploy to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: docs
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |-
+          Rscript -e "install.packages(c('remotes', 'bookdown'), repos = 'https://muug.ca/mirror/cran/')"
+          Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://muug.ca/mirror/cran/')"
+      - name: Build GitBook
+        run: |-
+                    Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+      - name: Deploy GitBook to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./_book
 
