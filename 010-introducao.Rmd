@@ -21,3 +21,11 @@ Gato
 ```r
 1+1
 ```
+
+
+
+```{r}
+library(gapminder)
+with(gapminder, plot(lifeExp~gdpPercap))
+```
+

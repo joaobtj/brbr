@@ -17,7 +17,20 @@ link-citations: yes
 
 ```{r, include=FALSE}
 
-library(knitr)
+local({
+  r = getOption('repos')
+  if (!length(r) || identical(unname(r['CRAN']), '@CRAN@'))
+    r['CRAN'] = 'https://cran.rstudio.com'
+  options(repos = r)
+})
+
+
+lapply(c('knitr', 'gapminder'), function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
+
+
+
 
 ```
 
