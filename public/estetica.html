@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exemplo de uso do bookdown em português</title>
+  <title>Capítulo 2 Estética | Exemplo de uso do bookdown em português</title>
   <meta name="description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook em português" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exemplo de uso do bookdown em português" />
+  <meta property="og:title" content="Capítulo 2 Estética | Exemplo de uso do bookdown em português" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.example.com" />
   <meta property="og:image" content="https://www.example.com/image/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exemplo de uso do bookdown em português" />
+  <meta name="twitter:title" content="Capítulo 2 Estética | Exemplo de uso do bookdown em português" />
   
   <meta name="twitter:description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook em português" />
   <meta name="twitter:image" content="https://www.example.com/image/cover.jpg" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="image/cover.jpg" />
   <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="introdução.html"/>
 
-<link rel="next" href="introdução.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -187,25 +187,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src="../image/books.jpg">
 </div>
-<div id="header">
-<h1 class="title">Exemplo de uso do bookdown em português</h1>
-<p class="author"><em>Autoria</em></p>
-<p class="date"><em>2021-09-28</em></p>
+<div id="estetica" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Estética</h1>
+<p>Elementos estéticos são modificados em arquivos CSS que ficam dentro da pasta <em>assets</em></p>
+<div id="toc---tabela-de-conteúdo" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> TOC - tabela de conteúdo</h2>
+<div id="logo-acima-do-toc" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Logo acima do TOC</h3>
+<p>No arquivo <code>_output.yml</code>, na seção config -&gt; toc -&gt; before</p>
 </div>
-<div id="prefácio" class="section level1 unnumbered">
-<h1>Prefácio</h1>
-<p><img src="https://bookdown.org/yihui/bookdown/images/logo.png" style="display: block; margin: auto;" /></p>
-<p>Texto inicial.</p>
-<p><a href="http://www.tolentino.pro.br">meu site</a></p>
+</div>
+<div id="imagem-hero" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Imagem <em>Hero</em></h2>
+</div>
+<div id="texto" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Texto</h2>
+<div id="fontes" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Fontes</h3>
+<p>Para mudar a aparência do texto com uma nova fonte, você precisa selecionar e importar as fontes em <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a> e estilizar um texto específico que será formatado com cada uma das fontes.</p>
+<div id="selecionando-e-importando-do-google-fonts" class="section level4" number="2.3.1.1">
+<h4><span class="header-section-number">2.3.1.1</span> Selecionando e importando do Google fonts</h4>
+<p>Acessando <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a> você poderá selecionar suas fontes preferidas entre milhares disponíveis.</p>
+<div class="recom">
+<p>É recomendável utilizar uma fonte <em>sans-serif</em> (sem serifas, ou seja, sem aqueles pequenos traços no fim das letras) para o texto principal por ser de mais fácil leitura em telas menores (smartphones).</p>
+</div>
+<p>Neste exemplo, eu escolhi a fonte <code>Montserrat</code> (Figura <a href="estetica.html#fig:gfont1">2.1</a>) para o texto principal e a fonte <code>Signika</code> (Figura <a href="estetica.html#fig:gfont2">2.2</a>) para os títulos das seções.</p>
+<div class="figure"><span style="display:block;" id="fig:gfont1"></span>
+<img src="image/font1.png" alt="Seleção da fonte `Montserrat`." width="684" />
+<p class="caption">
+Figura 2.1: Seleção da fonte <code>Montserrat</code>.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:gfont2"></span>
+<img src="image/font2.png" alt="Seleção da fonte `Signika`." width="682" />
+<p class="caption">
+Figura 2.2: Seleção da fonte <code>Signika</code>.
+</p>
+</div>
+<p>Para importar estas fontes, copie o código gerado em <code>@import</code> e cole no arquivo <em>css</em>.</p>
+<pre><code>/* importando a fonte do Google */
 
+@import url(&#39;https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Signika&amp;display=swap&#39;);</code></pre>
+</div>
+<div id="estilizando-o-texto" class="section level4" number="2.3.1.2">
+<h4><span class="header-section-number">2.3.1.2</span> Estilizando o texto</h4>
+<p>Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo <em>css</em></p>
+<pre><code> /* Texto principal */
+
+.book.font-family-1 {
+  font-family: &#39;Montserrat&#39;, sans-serif;
+}</code></pre>
+<ul>
+<li><code>.book.font-family-1</code> seleciona o texto principal.</li>
+<li><code>font-family: 'Montserrat'</code> indica o nome da fonte a ser utilizada</li>
+<li><code>sans-serif</code> indica ao navegador para usar uma fonte sans=serif padrão em caso de problemas com a fonte importada.</li>
+</ul>
+</div>
+</div>
+<div id="links" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Links</h3>
+</div>
+</div>
+<div id="notas" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Notas</h2>
+</div>
+<div id="mix" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Mix</h2>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="introdução.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="introdução.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -236,7 +293,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://gitlab.com/joaobtj/bookdownbr/edit/main/index.Rmd",
+"link": "https://gitlab.com/joaobtj/bookdownbr/edit/main/020-estetica.Rmd",
 "text": "Editar"
 },
 "history": {
@@ -244,7 +301,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://gitlab.com/joaobtj/bookdownbr/blob/main/index.Rmd",
+"link": "https://gitlab.com/joaobtj/bookdownbr/blob/main/020-estetica.Rmd",
 "text": null
 },
 "download": null,

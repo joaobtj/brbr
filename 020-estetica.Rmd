@@ -1,0 +1,73 @@
+# Estética {#estetica}
+
+Elementos estéticos são modificados em arquivos CSS que ficam dentro da pasta *assets*
+
+
+
+## TOC - tabela de conteúdo
+
+### Logo acima do TOC
+
+No arquivo `_output.yml`, na seção config -> toc -> before
+
+
+
+
+
+## Imagem *Hero*
+
+
+## Texto
+
+### Fontes
+
+Para mudar a aparência do texto com uma nova fonte, você precisa selecionar e importar as fontes em https://fonts.google.com/ e estilizar um texto específico que será formatado com cada uma das fontes.
+
+#### Selecionando e importando do Google fonts
+
+Acessando https://fonts.google.com/ você poderá selecionar suas fontes preferidas entre milhares disponíveis. 
+
+:::recom
+É recomendável utilizar uma fonte *sans-serif* (sem serifas, ou seja, sem aqueles pequenos traços no fim das letras) para o texto principal por ser de mais fácil leitura em telas menores (smartphones).
+:::
+
+Neste exemplo, eu escolhi a fonte `Montserrat` (Figura \@ref(fig:gfont1)) para o texto principal e a fonte `Signika` (Figura \@ref(fig:gfont2)) para os títulos das seções.
+
+```{r gfont1, echo=FALSE, fig.cap="Seleção da fonte `Montserrat`."}
+knitr::include_graphics("image/font1.png")
+```
+
+```{r gfont2, echo=FALSE, fig.cap="Seleção da fonte `Signika`."}
+knitr::include_graphics("image/font2.png")
+```
+
+Para importar estas fontes, copie o código gerado em `@import` e cole no arquivo *css*.
+
+```
+/* importando a fonte do Google */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Signika&display=swap');
+```
+#### Estilizando o texto
+
+Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo *css*
+
+```
+ /* Texto principal */
+
+.book.font-family-1 {
+  font-family: 'Montserrat', sans-serif;
+}
+```
+
+* `.book.font-family-1` seleciona o texto principal.
+* `font-family: 'Montserrat'` indica o nome da fonte a ser utilizada
+* `sans-serif` indica ao navegador para usar uma fonte sans=serif padrão em caso de problemas com a fonte importada.
+
+### Links
+
+
+## Notas
+
+## Mix
+
