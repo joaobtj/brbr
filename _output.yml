@@ -1,5 +1,5 @@
-bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
-  css: assets/style.css #arquivo .css
+bookdown::gitbook:  #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
+  css: [assets/style.css, assets/toc.css, assets/text.css] #arquivo .css
   split_by: chapter #rmd, none, chapter, section, chapter+number, section+number
   split_bib: yes #yes: adiciona as referências em cada página
   includes:

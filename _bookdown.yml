@@ -2,7 +2,7 @@ book_filename: "book"
 delete_merged_file: true
 edit: https://gitlab.com/joaobtj/bookdownbr/edit/main/%s
 view: https://gitlab.com/joaobtj/bookdownbr/blob/main/%s
-output_dir: public #public para gitlab; docs para github
+output_dir: docs #public para gitlab; docs para github
 language:
   label:
     fig: 'Figura '
