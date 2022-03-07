@@ -147,6 +147,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="0.3" data-path="index.html"><a href="#sumário-table-of-contents---toc"><i class="fa fa-check"></i><b>0.3</b> Sumário (Table Of Contents - TOC)<span></span></a><ul>
 <li class="chapter" data-level="0.3.1" data-path="index.html"><a href="#inserir-imagem-acimaabaixo-do-sumário"><i class="fa fa-check"></i><b>0.3.1</b> Inserir imagem acima/abaixo do sumário<span></span></a></li>
+<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="#mudar-a-cor-de-fundo-do-sumário"><i class="fa fa-check"></i><b>0.3.2</b> Mudar a cor de fundo do sumário<span></span></a></li>
+<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="#estilizando-os-links-do-sumário"><i class="fa fa-check"></i><b>0.3.3</b> Estilizando os links do Sumário<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="0.4" data-path="index.html"><a href="#imagem-hero"><i class="fa fa-check"></i><b>0.4</b> Imagem <em>Hero</em><span></span></a></li>
 <li class="chapter" data-level="0.5" data-path="index.html"><a href="#texto"><i class="fa fa-check"></i><b>0.5</b> Texto<span></span></a><ul>
@@ -155,9 +157,6 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="0.6" data-path="index.html"><a href="#caixas-de-texto"><i class="fa fa-check"></i><b>0.6</b> Caixas de Texto<span></span></a></li>
 <li class="chapter" data-level="0.7" data-path="index.html"><a href="#mix"><i class="fa fa-check"></i><b>0.7</b> Mix<span></span></a></li>
-<li class="chapter" data-level="0.8" data-path="index.html"><a href="#sumário---toc-table-of-contents"><i class="fa fa-check"></i><b>0.8</b> Sumário - TOC (Table Of Contents)<span></span></a><ul>
-<li class="chapter" data-level="0.8.1" data-path="index.html"><a href="#desdobramento"><i class="fa fa-check"></i><b>0.8.1</b> Desdobramento<span></span></a></li>
-</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li class="toc-logo"><a href="./"><img src="image/ufsc.png"></a></li>
@@ -271,42 +270,78 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-17"><a href="#cb5-17"></a>}</span></code></pre></div>
 <p>Para ajustar o tamanho da imagem, modifique o argumento <code>width</code>.</p>
 </div>
+<div id="mudar-a-cor-de-fundo-do-sumário" class="section level3 hasAnchor">
+<h3><span class="header-section-number">0.3.2</span> Mudar a cor de fundo do sumário<a href="#mudar-a-cor-de-fundo-do-sumário" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>No arquivo css. inserir o seguinte código:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">/</span><span class="er">*</span><span class="op">------------</span><span class="st"> </span>TOC color<span class="op">--------------</span><span class="er">*/</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>.book .book<span class="op">-</span>summary {</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  background<span class="op">:</span><span class="st"> </span><span class="co">#e8e8e8;</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="st">  </span>border<span class="op">-</span>right<span class="op">:</span><span class="st"> </span>none;</span>
+<span id="cb6-5"><a href="#cb6-5"></a>}</span></code></pre></div>
+</div>
+<div id="estilizando-os-links-do-sumário" class="section level3 hasAnchor">
+<h3><span class="header-section-number">0.3.3</span> Estilizando os links do Sumário<a href="#estilizando-os-links-do-sumário" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para alterar a fonte:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">/</span><span class="er">*</span><span class="op">------------</span><span class="st"> </span>TOC font<span class="op">--------------</span><span class="er">*/</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>.summary{</span>
+<span id="cb7-3"><a href="#cb7-3"></a>font<span class="op">-</span>family<span class="op">:</span><span class="st"> &#39;Signika &#39;</span>, sans<span class="op">-</span>serif;</span>
+<span id="cb7-4"><a href="#cb7-4"></a>}</span></code></pre></div>
+<p>Para alterar a cor da fonte:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>.book .book<span class="op">-</span>summary ul.summary li a,</span>
+<span id="cb8-2"><a href="#cb8-2"></a>.book .book<span class="op">-</span>summary ul.summary li span {</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  padding<span class="op">-</span>top<span class="op">:</span><span class="st"> </span>8px;</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  padding<span class="op">-</span>bottom<span class="op">:</span><span class="st"> </span>8px;</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  padding<span class="op">-</span>left<span class="op">:</span><span class="st"> </span>15px;</span>
+<span id="cb8-6"><a href="#cb8-6"></a>  padding<span class="op">-</span>right<span class="op">:</span><span class="st"> </span>15px;</span>
+<span id="cb8-7"><a href="#cb8-7"></a>  color<span class="op">:</span><span class="st"> </span><span class="co">#30326e;</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>}</span></code></pre></div>
+<p>Para uma cor diferente quando o link é apontado:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>.summary a<span class="op">:</span>hover {</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  color<span class="op">:</span><span class="st"> </span><span class="co">##335aa1 !important;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>}</span></code></pre></div>
+<p>Alterar a cor para o link ativo:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>.book .book<span class="op">-</span>summary ul.summary li.active<span class="op">&gt;</span>a { <span class="op">/</span><span class="er">*</span>active TOC links<span class="op">*</span><span class="er">/</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="st">  </span>color<span class="op">:</span><span class="st"> </span><span class="co">#ad366e !important;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="st">  </span>border<span class="op">-</span>left<span class="op">:</span><span class="st"> </span>solid 4px;</span>
+<span id="cb10-4"><a href="#cb10-4"></a>  border<span class="op">-</span>color<span class="op">:</span><span class="st"> </span><span class="co">#5699cc;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="st">  </span>padding<span class="op">-</span>left<span class="op">:</span><span class="st"> </span>11px <span class="op">!</span>important;</span>
+<span id="cb10-6"><a href="#cb10-6"></a>}</span></code></pre></div>
+</div>
 </div>
 <div id="imagem-hero" class="section level2 hasAnchor">
 <h2><span class="header-section-number">0.4</span> Imagem <em>Hero</em><a href="#imagem-hero" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Uma image hero é uma imagem larga que ocupa toda a largura da página.</p>
 <p>Inicialmente, deve-se ser criado um arquivo HTML onde será inserido o seguinte código:</p>
-<pre><code>&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;div class=&quot;hero-image-container&quot;&gt; 
-  &lt;img class= &quot;hero-image&quot; src=&quot;../&lt;site&gt;/image/books.png&quot;&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">&lt;</span>link href=<span class="st">&quot;style.css&quot;</span> rel=<span class="st">&quot;stylesheet&quot;</span><span class="op">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="er">&lt;</span>div class=<span class="st">&quot;hero-image-container&quot;</span><span class="op">&gt;</span><span class="st"> </span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="st">  </span><span class="er">&lt;</span>img class=<span class="st"> &quot;hero-image&quot;</span> src=<span class="st">&quot;../&lt;site&gt;/image/books.png&quot;</span><span class="op">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="er">&lt;/</span>div<span class="op">&gt;</span></span></code></pre></div>
 <p>Este arquivo deve ser linkado em <code>_output.yml</code> na seção includes -&gt; before_body</p>
 <p>HACK: para copiar a imagem para a versão final, precisei adicionar a imagem “oculta” (tamanho zero) com o seguinte código:</p>
-<pre><code>![](image/books.jpg){width=0%}</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">!</span>[](image<span class="op">/</span>books.jpg){width=<span class="dv">0</span>%}</span></code></pre></div>
 <p><img src="image/books.jpg" style="width:0.0%" /></p>
 <p>No arquivo css, a imagem deve ser configurada com o seguinte código:</p>
-<pre><code>/*---------------Hero Image------------------*/
-
-.hero-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 390px;
-  /*background-image: url(&quot;image/books.jpg&quot;);*/
-  background-color: #3fb5bd;
-}
-
-.hero-image {
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
-}
-
-.page-inner {
-  padding-top: 440px !important;
-}</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="op">/</span><span class="er">*</span><span class="op">---------------</span>Hero Image<span class="op">------------------</span><span class="er">*/</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>.hero<span class="op">-</span>image<span class="op">-</span>container {</span>
+<span id="cb13-4"><a href="#cb13-4"></a>  position<span class="op">:</span><span class="st"> </span>absolute;</span>
+<span id="cb13-5"><a href="#cb13-5"></a>  top<span class="op">:</span><span class="st"> </span><span class="dv">0</span>;</span>
+<span id="cb13-6"><a href="#cb13-6"></a>  left<span class="op">:</span><span class="st"> </span><span class="dv">0</span>;</span>
+<span id="cb13-7"><a href="#cb13-7"></a>  right<span class="op">:</span><span class="st"> </span><span class="dv">0</span>;</span>
+<span id="cb13-8"><a href="#cb13-8"></a>  height<span class="op">:</span><span class="st"> </span>390px;</span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="op">/</span><span class="er">*</span>background<span class="op">-</span>image<span class="op">:</span><span class="st"> </span><span class="kw">url</span>(<span class="st">&quot;image/books.jpg&quot;</span>);<span class="op">*</span><span class="er">/</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a><span class="st">  </span>background<span class="op">-</span>color<span class="op">:</span><span class="st"> </span><span class="co">#3fb5bd;</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>}</span>
+<span id="cb13-12"><a href="#cb13-12"></a></span>
+<span id="cb13-13"><a href="#cb13-13"></a>.hero<span class="op">-</span>image {</span>
+<span id="cb13-14"><a href="#cb13-14"></a>  width<span class="op">:</span><span class="st"> </span><span class="dv">100</span>%;</span>
+<span id="cb13-15"><a href="#cb13-15"></a>  height<span class="op">:</span><span class="st"> </span>390px;</span>
+<span id="cb13-16"><a href="#cb13-16"></a>  object<span class="op">-</span>fit<span class="op">:</span><span class="st"> </span>cover;</span>
+<span id="cb13-17"><a href="#cb13-17"></a>}</span>
+<span id="cb13-18"><a href="#cb13-18"></a></span>
+<span id="cb13-19"><a href="#cb13-19"></a>.page<span class="op">-</span>inner {</span>
+<span id="cb13-20"><a href="#cb13-20"></a>  padding<span class="op">-</span>top<span class="op">:</span><span class="st"> </span>440px <span class="op">!</span>important;</span>
+<span id="cb13-21"><a href="#cb13-21"></a>}</span></code></pre></div>
 </div>
 <div id="texto" class="section level2 hasAnchor">
 <h2><span class="header-section-number">0.5</span> Texto<a href="#texto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -333,91 +368,91 @@ Figura 2: Seleção da fonte <code>Signika Regular 400</code>.
 </p>
 </div>
 <p>Para importar estas fontes, copie o código gerado em <code>@import</code> (veja exemplo abaixo) e cole no arquivo <em>css</em>.</p>
-<pre><code>/* importando a fonte do Google */
-
-@import url(&#39;https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Signika&amp;display=swap&#39;);</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="op">/</span><span class="er">*</span><span class="st"> </span>importando a fonte do Google <span class="op">*</span><span class="er">/</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="er">@</span>import <span class="kw">url</span>(<span class="st">&#39;https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Signika&amp;display=swap&#39;</span>);</span></code></pre></div>
 </div>
 <div id="estilizando-o-texto" class="section level4 hasAnchor">
 <h4><span class="header-section-number">0.5.1.2</span> Estilizando o texto<a href="#estilizando-o-texto" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo <em>css</em></p>
-<pre><code> /* Texto principal */
-.book.font-family-1 {
-  font-family: &#39;Montserrat&#39;, sans-serif;
-}</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a> <span class="op">/</span><span class="er">*</span><span class="st"> </span>Texto principal <span class="op">*</span><span class="er">/</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>.book.font<span class="op">-</span>family<span class="dv">-1</span> {</span>
+<span id="cb15-3"><a href="#cb15-3"></a>  font<span class="op">-</span>family<span class="op">:</span><span class="st"> &#39;Montserrat&#39;</span>, sans<span class="op">-</span>serif;</span>
+<span id="cb15-4"><a href="#cb15-4"></a>}</span></code></pre></div>
 <ul>
 <li><code>.book.font-family-1</code> seleciona o texto principal.</li>
 <li><code>font-family: 'Montserrat'</code> indica o nome da fonte a ser utilizada</li>
 <li><code>sans-serif</code> indica ao navegador para usar uma fonte sans-serif padrão em caso de problemas com a fonte importada.</li>
 </ul>
 <p>Para alterar a fonte dos cabeçalhos, adicione o seguinte código:</p>
-<pre><code>/* Cabeçalhos */
-h1, h2, h3, h4 {
-  font-family: &#39;Signika&#39;, sans-serif;
-}</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="op">/</span><span class="er">*</span><span class="st"> </span>Cabeçalhos <span class="op">*</span><span class="er">/</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>h1, h2, h3, h4 {</span>
+<span id="cb16-3"><a href="#cb16-3"></a>  font<span class="op">-</span>family<span class="op">:</span><span class="st"> &#39;Signika&#39;</span>, sans<span class="op">-</span>serif;</span>
+<span id="cb16-4"><a href="#cb16-4"></a>}</span></code></pre></div>
 <p>Para o título e subtítulo:</p>
-<pre><code>/* Título */
-.title {
-  font-family: &#39;Signika&#39;;
-  font-size: 3em !important;
-  color: #e82315;
-  margin-top: 0.275em !important;
-  margin-bottom: 0.35em !important;
-}
-/* Subtítulo */
-.subtitle {
-  font-family: &#39;Signika&#39;;
-  color: #917ade;
-}</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">/</span><span class="er">*</span><span class="st"> </span>Título <span class="op">*</span><span class="er">/</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>.title {</span>
+<span id="cb17-3"><a href="#cb17-3"></a>  font<span class="op">-</span>family<span class="op">:</span><span class="st"> &#39;Signika&#39;</span>;</span>
+<span id="cb17-4"><a href="#cb17-4"></a>  font<span class="op">-</span>size<span class="op">:</span><span class="st"> </span>3em <span class="op">!</span>important;</span>
+<span id="cb17-5"><a href="#cb17-5"></a>  color<span class="op">:</span><span class="st"> </span><span class="co">#e82315;</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="st">  </span>margin<span class="op">-</span>top<span class="op">:</span><span class="st"> </span><span class="fl">0.275</span>em <span class="op">!</span>important;</span>
+<span id="cb17-7"><a href="#cb17-7"></a>  margin<span class="op">-</span>bottom<span class="op">:</span><span class="st"> </span><span class="fl">0.35</span>em <span class="op">!</span>important;</span>
+<span id="cb17-8"><a href="#cb17-8"></a>}</span>
+<span id="cb17-9"><a href="#cb17-9"></a><span class="op">/</span><span class="er">*</span><span class="st"> </span>Subtítulo <span class="op">*</span><span class="er">/</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a>.subtitle {</span>
+<span id="cb17-11"><a href="#cb17-11"></a>  font<span class="op">-</span>family<span class="op">:</span><span class="st"> &#39;Signika&#39;</span>;</span>
+<span id="cb17-12"><a href="#cb17-12"></a>  color<span class="op">:</span><span class="st"> </span><span class="co">#917ade;</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a>}</span></code></pre></div>
 <p>Observem que mais características firam alteradas, como a cor das fontes.</p>
 </div>
 </div>
 <div id="links" class="section level3 hasAnchor">
 <h3><span class="header-section-number">0.5.2</span> Links<a href="#links" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Os links para outros endereços podem ser estilizados, modificando sua aparência normal e quando apontado (<em>hover</em>) ou clicado (<em>visited</em>).</p>
-<pre><code>/*----- Links -------*/
-.book .book-body .page-wrapper .page-inner section.normal a:link{
-  color: #67aae0;
-}
-.book .book-body .page-wrapper .page-inner section.normal a:hover {
-color: #1980d4; /* escurecer quando apontado */
-background-color: #c4c4c4;
-}
-.book .book-body .page-wrapper .page-inner section.normal a:visited {
-color: #d44e19;
-}</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="op">/</span><span class="er">*</span><span class="op">-----</span><span class="st"> </span>Links <span class="op">-------</span><span class="er">*/</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>.book .book<span class="op">-</span>body .page<span class="op">-</span>wrapper .page<span class="op">-</span>inner section.normal a<span class="op">:</span>link{</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  color<span class="op">:</span><span class="st"> </span><span class="co">#67aae0;</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>}</span>
+<span id="cb18-5"><a href="#cb18-5"></a>.book .book<span class="op">-</span>body .page<span class="op">-</span>wrapper .page<span class="op">-</span>inner section.normal a<span class="op">:</span>hover {</span>
+<span id="cb18-6"><a href="#cb18-6"></a>color<span class="op">:</span><span class="st"> </span><span class="co">#1980d4; /* escurecer quando apontado */</span></span>
+<span id="cb18-7"><a href="#cb18-7"></a>background<span class="op">-</span>color<span class="op">:</span><span class="st"> </span><span class="co">#c4c4c4;</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a>}</span>
+<span id="cb18-9"><a href="#cb18-9"></a>.book .book<span class="op">-</span>body .page<span class="op">-</span>wrapper .page<span class="op">-</span>inner section.normal a<span class="op">:</span>visited {</span>
+<span id="cb18-10"><a href="#cb18-10"></a>color<span class="op">:</span><span class="st"> </span><span class="co">#d44e19;</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a>}</span></code></pre></div>
 </div>
 </div>
 <div id="caixas-de-texto" class="section level2 hasAnchor">
 <h2><span class="header-section-number">0.6</span> Caixas de Texto<a href="#caixas-de-texto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As caixas de texto são personalizadas para destacar alguma dica, sugestão ou aviso importante. É possível criar diferentes caixas de textos pra diferentes objetivos.</p>
 <p>No arquivo css, inserir o seguinte código:</p>
-<pre><code>/* -----------Caixa de texto------------- */
-  div.cursor, div.cat {
-    padding: 1em;
-    margin: 1em 0;
-    padding-left: 100px;
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: 15px center;
-    min-height: 120px;
-    color: #1f5386;
-    background-color: #f6ff00;
-    border: solid 5px #000000;
-  }
-
-div.cursor {
-  background-image: url(&quot;../image/cursor.png&quot;);
-}
-
-div.cat {
- background-image: url(&quot;../image/cat.png&quot;);
-}</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">/</span><span class="er">*</span><span class="st"> </span><span class="op">-----------</span>Caixa de texto<span class="op">-------------</span><span class="st"> </span><span class="er">*/</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="st">  </span>div.cursor, div.cat {</span>
+<span id="cb19-3"><a href="#cb19-3"></a>    padding<span class="op">:</span><span class="st"> </span>1em;</span>
+<span id="cb19-4"><a href="#cb19-4"></a>    margin<span class="op">:</span><span class="st"> </span>1em <span class="dv">0</span>;</span>
+<span id="cb19-5"><a href="#cb19-5"></a>    padding<span class="op">-</span>left<span class="op">:</span><span class="st"> </span>100px;</span>
+<span id="cb19-6"><a href="#cb19-6"></a>    background<span class="op">-</span>size<span class="op">:</span><span class="st"> </span>70px;</span>
+<span id="cb19-7"><a href="#cb19-7"></a>    background<span class="op">-</span><span class="cf">repeat</span><span class="op">:</span><span class="st"> </span>no<span class="op">-</span><span class="cf">repeat</span>;</span>
+<span id="cb19-8"><a href="#cb19-8"></a>    background<span class="op">-</span>position<span class="op">:</span><span class="st"> </span>15px center;</span>
+<span id="cb19-9"><a href="#cb19-9"></a>    min<span class="op">-</span>height<span class="op">:</span><span class="st"> </span>120px;</span>
+<span id="cb19-10"><a href="#cb19-10"></a>    color<span class="op">:</span><span class="st"> </span><span class="co">#1f5386;</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a><span class="st">    </span>background<span class="op">-</span>color<span class="op">:</span><span class="st"> </span><span class="co">#f6ff00;</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a><span class="st">    </span>border<span class="op">:</span><span class="st"> </span>solid 5px <span class="co">#000000;</span></span>
+<span id="cb19-13"><a href="#cb19-13"></a>  }</span>
+<span id="cb19-14"><a href="#cb19-14"></a></span>
+<span id="cb19-15"><a href="#cb19-15"></a>div.cursor {</span>
+<span id="cb19-16"><a href="#cb19-16"></a>  background<span class="op">-</span>image<span class="op">:</span><span class="st"> </span><span class="kw">url</span>(<span class="st">&quot;../image/cursor.png&quot;</span>);</span>
+<span id="cb19-17"><a href="#cb19-17"></a>}</span>
+<span id="cb19-18"><a href="#cb19-18"></a></span>
+<span id="cb19-19"><a href="#cb19-19"></a>div.cat {</span>
+<span id="cb19-20"><a href="#cb19-20"></a> background<span class="op">-</span>image<span class="op">:</span><span class="st"> </span><span class="kw">url</span>(<span class="st">&quot;../image/cat.png&quot;</span>);</span>
+<span id="cb19-21"><a href="#cb19-21"></a>}</span></code></pre></div>
 <p>A cor de fundo das caixas de texto pode ser alterada com o argumento <code>background-color:</code>, enquanto que a cor do texto é alterada com o argumento <code>color:</code>.</p>
 <p>A imagem é alterada com o argumento <code>background-image:</code>.</p>
 <p>Para usar a caixa de texto:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="op">:::</span>cursor</span>
-<span id="cb15-2"><a href="#cb15-2"></a>Use a caixa de texto digitando<span class="st">`</span><span class="dt"> ::: </span><span class="st">`</span>seguido do nome atribuído ao <span class="kw">estilo</span> (depois da palavra <span class="op">*</span>div<span class="op">*</span>) no arquivo css.</span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="op">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">:::</span>cursor</span>
+<span id="cb20-2"><a href="#cb20-2"></a>Use a caixa de texto digitando<span class="st">`</span><span class="dt"> ::: </span><span class="st">`</span>seguido do nome atribuído ao <span class="kw">estilo</span> (depois da palavra <span class="op">*</span>div<span class="op">*</span>) no arquivo css.</span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="op">:::</span></span></code></pre></div>
 <div class="cursor">
 <p>Use a caixa de texto digitando<code>:::</code>seguido do nome atribuído ao estilo (depois da palavra <em>div</em>) no arquivo css.</p>
 </div>
@@ -425,17 +460,6 @@ div.cat {
 <div id="mix" class="section level2 hasAnchor">
 <h2><span class="header-section-number">0.7</span> Mix<a href="#mix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
-<p>Configurações {#config}</p>
-</div>
-<div id="sumário---toc-table-of-contents" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.8</span> Sumário - TOC (Table Of Contents)<a href="#sumário---toc-table-of-contents" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="desdobramento" class="section level3 hasAnchor">
-<h3><span class="header-section-number">0.8.1</span> Desdobramento<a href="#desdobramento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>É possivel controlar se o sumário será mostrado até as seções/subseções por padrão.</p>
-<p>No arquivo <code>_output.yml</code>, na seção config -&gt; toc -&gt; collapse</p>
-<p>São aceitos os seguintes argumentos: <code>subsection</code>, <code>section</code> ou <code>none</code></p>
-
-</div>
 </div>
 </div>
             </section>
