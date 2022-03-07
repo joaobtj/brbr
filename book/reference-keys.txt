@@ -11,7 +11,7 @@ fontes
 selecionando-e-importando-do-google-fonts
 estilizando-o-texto
 links
-notas
+caixas-de-texto
 mix
 sumário---toc-table-of-contents
 desdobramento

@@ -157,7 +157,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="0.5.1" data-path="index.html"><a href="#fontes"><i class="fa fa-check"></i><b>0.5.1</b> Fontes<span></span></a></li>
 <li class="chapter" data-level="0.5.2" data-path="index.html"><a href="#links"><i class="fa fa-check"></i><b>0.5.2</b> Links<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="index.html"><a href="#notas"><i class="fa fa-check"></i><b>0.6</b> Notas<span></span></a></li>
+<li class="chapter" data-level="0.6" data-path="index.html"><a href="#caixas-de-texto"><i class="fa fa-check"></i><b>0.6</b> Caixas de Texto<span></span></a></li>
 <li class="chapter" data-level="0.7" data-path="index.html"><a href="#mix"><i class="fa fa-check"></i><b>0.7</b> Mix<span></span></a></li>
 <li class="chapter" data-level="0.8" data-path="index.html"><a href="#sumário---toc-table-of-contents"><i class="fa fa-check"></i><b>0.8</b> Sumário - TOC (Table Of Contents)<span></span></a>
 <ul>
@@ -187,7 +187,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <link href="style.css" rel="stylesheet">
 <div class="hero-image-container">
-  <img class= "hero-image" src="..brbr/image/books.jpg">
+  <img class= "hero-image" src="../brbr/image/books.jpg">
 </div>
 <div id="header">
 <h1 class="title">Exemplo de uso do bookdown em português</h1>
@@ -256,26 +256,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><code>&lt;li class="toc-logo"&gt;&lt;a href="./"&gt;&lt;img src="image/ufsc.png"&gt;&lt;/a&gt;&lt;/li&gt;</code></p>
 <p>A classe <code>"toc-logo"</code> é estilizada no arquivo css</p>
 <p>Para inserir uma imagem abaixo do sumário, apenas alterar para a seção config -&gt; toc -&gt; after</p>
-<pre><code>
-As configurações desta imagem devem ser feitas no arquivo toc.css
-
-/*--- LOGO ---*/
-
-.toc-logo {
-  width: 100px !important;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
-}
-
-.toc-logo img {
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-.summary &gt; li:first-child {
-  height: auto !important;
-}</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>As configurações desta imagem devem ser feitas no arquivo toc.css</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">*</span><span class="sc">---</span> LOGO <span class="sc">---</span><span class="er">*/</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>.toc<span class="sc">-</span>logo {</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  width<span class="sc">:</span> 100px <span class="sc">!</span>important;</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  object<span class="sc">-</span>fit<span class="sc">:</span> contain;</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  margin<span class="sc">:</span> <span class="dv">0</span> auto;</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  display<span class="sc">:</span> block;</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>.toc<span class="sc">-</span>logo img {</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  max<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  margin<span class="sc">-</span>bottom<span class="sc">:</span> 10px;</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>.summary <span class="sc">&gt;</span> li<span class="sc">:</span>first<span class="sc">-</span>child {</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  height<span class="sc">:</span> auto <span class="sc">!</span>important;</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Para ajustar o tamanho da imagem, modifique o argumento <code>width</code>.</p>
 </div>
 </div>
@@ -285,7 +284,7 @@ As configurações desta imagem devem ser feitas no arquivo toc.css
 <p>Inicialmente, deve-se ser criado um arquivo HTML onde será inserido o seguinte código:</p>
 <pre><code>&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;div class=&quot;hero-image-container&quot;&gt; 
-  &lt;img class= &quot;hero-image&quot; src=&quot;../image/books.png&quot;&gt;
+  &lt;img class= &quot;hero-image&quot; src=&quot;../&lt;site&gt;/image/books.png&quot;&gt;
 &lt;/div&gt;
 </code></pre>
 <p>Este arquivo deve ser linkado em <code>_output.yml</code> na seção includes -&gt; before_body</p>
@@ -394,8 +393,40 @@ color: #d44e19;
 }</code></pre>
 </div>
 </div>
-<div id="notas" class="section level2 hasAnchor" number="0.6">
-<h2><span class="header-section-number">0.6</span> Notas<a href="#notas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="caixas-de-texto" class="section level2 hasAnchor" number="0.6">
+<h2><span class="header-section-number">0.6</span> Caixas de Texto<a href="#caixas-de-texto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As caixas de texto são personalizadas para destacar alguma dica, sugestão ou aviso importante. É possível criar diferentes caixas de textos pra diferentes objetivos.</p>
+<p>No arquivo css, inserir o seguinte código:</p>
+<pre><code>/* -----------Caixa de texto------------- */
+  div.cursor, div.cat {
+    padding: 1em;
+    margin: 1em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    color: #1f5386;
+    background-color: #f6ff00;
+    border: solid 5px #000000;
+  }
+
+div.cursor {
+  background-image: url(&quot;../image/cursor.png&quot;);
+}
+
+div.cat {
+ background-image: url(&quot;../image/cat.png&quot;);
+}</code></pre>
+<p>A cor de fundo das caixas de texto pode ser alterada com o argumento <code>background-color:</code>, enquanto que a cor do texto é alterada com o argumento <code>color:</code>.</p>
+<p>A imagem é alterada com o argumento <code>background-image:</code>.</p>
+<p>Para usar a caixa de texto:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>cursor</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Use a caixa de texto digitando<span class="st">`</span><span class="at"> ::: </span><span class="st">`</span>seguido do nome atribuído ao <span class="fu">estilo</span> (depois da palavra <span class="sc">*</span>div<span class="sc">*</span>) no arquivo css.</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code></pre></div>
+<div class="cursor">
+<p>Use a caixa de texto digitando<code>:::</code>seguido do nome atribuído ao estilo (depois da palavra <em>div</em>) no arquivo css.</p>
+</div>
 </div>
 <div id="mix" class="section level2 hasAnchor" number="0.7">
 <h2><span class="header-section-number">0.7</span> Mix<a href="#mix" class="anchor-section" aria-label="Anchor link to header"></a></h2>

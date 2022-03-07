@@ -19,10 +19,10 @@ A classe `"toc-logo"` é estilizada no arquivo css
 Para inserir uma imagem abaixo do sumário, apenas alterar para a seção config -> toc -> after
 
 
-```
-
 As configurações desta imagem devem ser feitas no arquivo toc.css
 
+
+```r
 /*--- LOGO ---*/
 
 .toc-logo {
@@ -54,7 +54,7 @@ Inicialmente, deve-se ser criado um arquivo HTML onde será inserido o seguinte 
 ```
 <link href="style.css" rel="stylesheet">
 <div class="hero-image-container"> 
-  <img class= "hero-image" src="../image/books.png">
+  <img class= "hero-image" src="../<site>/image/books.png">
 </div>
 
 ```
@@ -193,7 +193,55 @@ color: #d44e19;
 }
 ```
 
-## Notas
+## Caixas de Texto
+
+As caixas de texto são personalizadas para destacar alguma dica, sugestão ou aviso importante. É possível criar diferentes caixas de textos pra diferentes objetivos.
+
+No arquivo css, inserir o seguinte código:
+
+```
+/* -----------Caixa de texto------------- */
+  div.cursor, div.cat {
+    padding: 1em;
+    margin: 1em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    color: #1f5386;
+    background-color: #f6ff00;
+    border: solid 5px #000000;
+  }
+
+div.cursor {
+  background-image: url("../image/cursor.png");
+}
+
+div.cat {
+ background-image: url("../image/cat.png");
+}
+```
+
+A cor de fundo das caixas de texto pode ser alterada com o argumento `background-color:`, enquanto que a cor do texto é alterada com o argumento `color:`.
+
+A imagem é alterada com o argumento `background-image:`.
+
+Para usar a caixa de texto:
+
+```r
+:::cursor
+Use a caixa de texto digitando` ::: `seguido do nome atribuído ao estilo (depois da palavra *div*) no arquivo css.
+:::
+
+```
+
+:::cursor
+Use a caixa de texto digitando` ::: `seguido do nome atribuído ao estilo (depois da palavra *div*) no arquivo css.
+:::
+
+
+
 
 ## Mix
 
