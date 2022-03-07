@@ -2,8 +2,6 @@
 
 /*---------------Hero Image------------------*/
 
-/* next 3 rules are for setting large image at top of each page and pushing down the book content to appear beneath the image */
-
 .hero-image-container {
   position: absolute;
   top: 0;

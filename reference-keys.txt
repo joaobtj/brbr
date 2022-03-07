@@ -1,11 +1,10 @@
 fig:gfont1
 fig:gfont2
-introdução
 o-início
+partes-e-apêndices
 começando
-estetica
-toc---tabela-de-conteúdo
-logo-acima-do-toc
+sumário-table-of-contents---toc
+inserir-imagem-acimaabaixo-do-sumário
 imagem-hero
 texto
 fontes
@@ -14,3 +13,5 @@ estilizando-o-texto
 links
 notas
 mix
+sumário---toc-table-of-contents
+desdobramento

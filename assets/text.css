@@ -8,11 +8,29 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
+/* Cabeçalhos */
 h1, h2, h3, h4 {
   font-family: 'Signika', sans-serif;
 }
 
+/* Título */
+.title {
+  font-family: 'Signika';
+  font-size: 3em !important;
+  color: #e82315;
+  margin-top: 0.275em !important;
+  margin-bottom: 0.35em !important;
+}
 
+/* Subtítulo */
+.subtitle {
+  font-family: 'Signika';
+  color: #917ade;
+}
+
+
+/*
 .book .book-body .page-wrapper .page-inner section.normal h1,
 .book .book-body .page-wrapper .page-inner section.normal h2,
 .book .book-body .page-wrapper .page-inner section.normal h3,
@@ -22,29 +40,24 @@ h1, h2, h3, h4 {
     margin-top: 2.275em;
     margin-bottom: 1em;
 }
-
-.title {
-  font-family: 'Signika';
-  font-size: 3em !important;
-  color: #3d557d;
-  margin-top: 0.275em !important;
-  margin-bottom: 0.35em !important;
-}
-
-.subtitle {
-  font-family: 'Signika';
-  color: #d624c1;
-}
+*/
 
 
 
 
-/*-----Body Links-------*/
 
-.book .book-body .page-wrapper .page-inner section.normal a {
-  color: #6530d9;
+
+/*----- Links -------*/
+
+.book .book-body .page-wrapper .page-inner section.normal a:link{
+  color: #67aae0;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a:hover {
-color: #2f068a; /* darker color when hovering */
+color: #1980d4; /* escurecer quando apontado */
+background-color: #c4c4c4;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:visited {
+color: #d44e19;
 }
