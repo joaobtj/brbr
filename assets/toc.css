@@ -19,5 +19,42 @@
 }
 
 
+/*------------ TOC color--------------*/
+.book .book-summary {
+  background: #e8e8e8;
+  border-right: none;
+}
 
+
+/*------------ TOC font--------------*/
+.summary{
+font-family: 'Signika ', sans-serif;
+}
+
+
+
+
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li span {
+  color: #30326e;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+.summary a:hover {
+  color: ##335aa1 !important;
+}
+
+
+
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #ad366e !important;
+  border-left: solid 4px;
+  border-color: #5699cc;
+  padding-left: 11px !important;
+}
 

@@ -5,6 +5,8 @@ partes-e-apêndices
 começando
 sumário-table-of-contents---toc
 inserir-imagem-acimaabaixo-do-sumário
+mudar-a-cor-de-fundo-do-sumário
+estilizando-os-links-do-sumário
 imagem-hero
 texto
 fontes
@@ -13,5 +15,3 @@ estilizando-o-texto
 links
 caixas-de-texto
 mix
-sumário---toc-table-of-contents
-desdobramento

@@ -45,13 +45,75 @@ As configurações desta imagem devem ser feitas no arquivo toc.css
 
 Para ajustar o tamanho da imagem, modifique o argumento `width`.
 
+
+
+### Mudar a cor de fundo do sumário
+
+No arquivo css. inserir o seguinte código:
+
+```r
+/*------------ TOC color--------------*/
+.book .book-summary {
+  background: #e8e8e8;
+  border-right: none;
+}
+```
+
+### Estilizando os links do Sumário
+
+Para alterar a fonte:
+
+```r
+/*------------ TOC font--------------*/
+.summary{
+font-family: 'Signika ', sans-serif;
+}
+```
+
+Para alterar a cor da fonte: 
+
+```r
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #30326e;
+}
+```
+
+
+Para uma cor diferente quando o link é apontado:
+
+```r
+.summary a:hover {
+  color: ##335aa1 !important;
+}
+```
+
+Alterar a cor para o link ativo:
+
+```r
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #ad366e !important;
+  border-left: solid 4px;
+  border-color: #5699cc;
+  padding-left: 11px !important;
+}
+```
+
+
+
+
+
 ## Imagem *Hero*
 
 Uma image hero é uma imagem larga que ocupa toda a largura da página. 
 
 Inicialmente, deve-se ser criado um arquivo HTML onde será inserido o seguinte código:
 
-```
+```r
 <link href="style.css" rel="stylesheet">
 <div class="hero-image-container"> 
   <img class= "hero-image" src="../<site>/image/books.png">
@@ -63,7 +125,7 @@ Este arquivo deve ser linkado em `_output.yml` na seção includes -> before_bod
 
 HACK: para copiar a imagem para a versão final, precisei adicionar a imagem "oculta" (tamanho zero) com o seguinte código:
 
-```
+```r
 ![](image/books.jpg){width=0%}
 ```
 
@@ -73,7 +135,7 @@ HACK: para copiar a imagem para a versão final, precisei adicionar a imagem "oc
 
 No arquivo css, a imagem deve ser configurada com o seguinte código:
 
-```
+```r
 /*---------------Hero Image------------------*/
 
 .hero-image-container {
@@ -125,7 +187,7 @@ knitr::include_graphics("image/font2.png")
 
 Para importar estas fontes, copie o código gerado em `@import` (veja exemplo abaixo) e cole no arquivo *css*.
 
-```
+```r
 /* importando a fonte do Google */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Signika&display=swap');
@@ -134,7 +196,7 @@ Para importar estas fontes, copie o código gerado em `@import` (veja exemplo ab
 
 Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo *css*
 
-```
+```r
  /* Texto principal */
 .book.font-family-1 {
   font-family: 'Montserrat', sans-serif;
@@ -148,7 +210,7 @@ Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo *
 
 Para alterar a fonte dos cabeçalhos, adicione o seguinte código:
 
-```
+```r
 /* Cabeçalhos */
 h1, h2, h3, h4 {
   font-family: 'Signika', sans-serif;
@@ -157,7 +219,7 @@ h1, h2, h3, h4 {
 
 Para o título e subtítulo:
 
-```
+```r
 /* Título */
 .title {
   font-family: 'Signika';
@@ -179,7 +241,7 @@ Observem que mais características firam alteradas, como a cor das fontes.
 
 Os links para outros endereços podem ser estilizados, modificando sua aparência normal e quando apontado (*hover*) ou clicado (*visited*). 
 
-```
+```r
 /*----- Links -------*/
 .book .book-body .page-wrapper .page-inner section.normal a:link{
   color: #67aae0;
@@ -199,7 +261,7 @@ As caixas de texto são personalizadas para destacar alguma dica, sugestão ou a
 
 No arquivo css, inserir o seguinte código:
 
-```
+```r
 /* -----------Caixa de texto------------- */
   div.cursor, div.cat {
     padding: 1em;
