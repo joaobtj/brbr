@@ -1,6 +1,7 @@
 --- 
 title: "Exemplo de uso do bookdown em português"
-author: "Autoria"
+subtitle: "Com modificaçõe estéticas"
+author: "João B. Tolentino Jr."
 date: "`r Sys.Date()`"
 description: "Este é um exemplo de um livro publicado com o pacote **bookdown** no formato *gitbook* em português"
 cover-image: image/cover.jpg

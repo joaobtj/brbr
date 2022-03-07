@@ -1,20 +1,102 @@
-# Estética {#estetica}
+ Estética {#estetica}
 
-Elementos estéticos são modificados em arquivos CSS que ficam dentro da pasta *assets*
+Elementos estéticos são modificados em arquivos CSS que ficam dentro da pasta *assets*. Estes arquivos devem estar linkados no arquivo `_output.yml`
 
-
-
-## TOC - tabela de conteúdo
-
-### Logo acima do TOC
-
-No arquivo `_output.yml`, na seção config -> toc -> before
+Imagens ficam armazenadas dentro da pasta *image*.
 
 
+##  Sumário (Table Of Contents - TOC)
+
+### Inserir imagem acima/abaixo do sumário
+
+Para inserir uma imagem acima do sumário, no arquivo `_output.yml`, na seção config -> toc -> before, inserir o seguinte código em html: 
+
+`<li class="toc-logo"><a href="./"><img src="image/ufsc.png"></a></li>`
+
+A classe `"toc-logo"` é estilizada no arquivo css
 
 
+Para inserir uma imagem abaixo do sumário, apenas alterar para a seção config -> toc -> after
+
+
+```
+
+As configurações desta imagem devem ser feitas no arquivo toc.css
+
+/*--- LOGO ---*/
+
+.toc-logo {
+  width: 100px !important;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.summary > li:first-child {
+  height: auto !important;
+}
+```
+
+
+Para ajustar o tamanho da imagem, modifique o argumento `width`.
 
 ## Imagem *Hero*
+
+Uma image hero é uma imagem larga que ocupa toda a largura da página. 
+
+Inicialmente, deve-se ser criado um arquivo HTML onde será inserido o seguinte código:
+
+```
+<link href="style.css" rel="stylesheet">
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="../image/books.png">
+</div>
+
+```
+
+Este arquivo deve ser linkado em `_output.yml` na seção includes -> before_body
+
+HACK: para copiar a imagem para a versão final, precisei adicionar a imagem "oculta" (tamanho zero) com o seguinte código:
+
+```
+![](image/books.jpg){width=0%}
+```
+
+![](image/books.jpg){width=0%}
+
+
+
+No arquivo css, a imagem deve ser configurada com o seguinte código:
+
+```
+/*---------------Hero Image------------------*/
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 390px;
+  /*background-image: url("image/books.jpg");*/
+  background-color: #3fb5bd;
+}
+
+.hero-image {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.page-inner {
+  padding-top: 440px !important;
+}
+```
+
 
 
 ## Texto
@@ -31,17 +113,17 @@ Acessando https://fonts.google.com/ você poderá selecionar suas fontes preferi
 É recomendável utilizar uma fonte *sans-serif* (sem serifas, ou seja, sem aqueles pequenos traços no fim das letras) para o texto principal por ser de mais fácil leitura em telas menores (smartphones).
 :::
 
-Neste exemplo, eu escolhi a fonte `Montserrat` (Figura \@ref(fig:gfont1)) para o texto principal e a fonte `Signika` (Figura \@ref(fig:gfont2)) para os títulos das seções.
+Neste exemplo, eu escolhi a fonte `Montserrat Regular 400` (Figura \@ref(fig:gfont1)) para o texto principal e a fonte `Signika Regular 400` (Figura \@ref(fig:gfont2)) para os títulos das seções.
 
-```{r gfont1, echo=FALSE, fig.cap="Seleção da fonte `Montserrat`."}
+```{r gfont1, echo=FALSE, fig.cap="Seleção da fonte `Montserrat Regular 400`."}
 knitr::include_graphics("image/font1.png")
 ```
 
-```{r gfont2, echo=FALSE, fig.cap="Seleção da fonte `Signika`."}
+```{r gfont2, echo=FALSE, fig.cap="Seleção da fonte `Signika Regular 400`."}
 knitr::include_graphics("image/font2.png")
 ```
 
-Para importar estas fontes, copie o código gerado em `@import` e cole no arquivo *css*.
+Para importar estas fontes, copie o código gerado em `@import` (veja exemplo abaixo) e cole no arquivo *css*.
 
 ```
 /* importando a fonte do Google */
@@ -54,7 +136,6 @@ Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo *
 
 ```
  /* Texto principal */
-
 .book.font-family-1 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -62,10 +143,55 @@ Para alterar a fonte do texto principal, adicone o seguinte código ao arquivo *
 
 * `.book.font-family-1` seleciona o texto principal.
 * `font-family: 'Montserrat'` indica o nome da fonte a ser utilizada
-* `sans-serif` indica ao navegador para usar uma fonte sans=serif padrão em caso de problemas com a fonte importada.
+* `sans-serif` indica ao navegador para usar uma fonte sans-serif padrão em caso de problemas com a fonte importada.
+
+
+Para alterar a fonte dos cabeçalhos, adicione o seguinte código:
+
+```
+/* Cabeçalhos */
+h1, h2, h3, h4 {
+  font-family: 'Signika', sans-serif;
+}
+```
+
+Para o título e subtítulo:
+
+```
+/* Título */
+.title {
+  font-family: 'Signika';
+  font-size: 3em !important;
+  color: #e82315;
+  margin-top: 0.275em !important;
+  margin-bottom: 0.35em !important;
+}
+/* Subtítulo */
+.subtitle {
+  font-family: 'Signika';
+  color: #917ade;
+}
+```
+
+Observem que mais características firam alteradas, como a cor das fontes.
 
 ### Links
 
+Os links para outros endereços podem ser estilizados, modificando sua aparência normal e quando apontado (*hover*) ou clicado (*visited*). 
+
+```
+/*----- Links -------*/
+.book .book-body .page-wrapper .page-inner section.normal a:link{
+  color: #67aae0;
+}
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+color: #1980d4; /* escurecer quando apontado */
+background-color: #c4c4c4;
+}
+.book .book-body .page-wrapper .page-inner section.normal a:visited {
+color: #d44e19;
+}
+```
 
 ## Notas
 

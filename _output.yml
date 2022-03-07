@@ -1,17 +1,19 @@
 bookdown::gitbook:  #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
-  css: [assets/style.css, assets/toc.css, assets/text.css] #arquivo .css
+  highlight: tango
+  css: [assets/style.css, assets/toc.css, assets/text.css] #arquivos .css
   split_by: chapter #rmd, none, chapter, section, chapter+number, section+number
   split_bib: yes #yes: adiciona as referências em cada página
   includes:
-    before_body: assets/hero-image.html #incluir códigos no HEAD do html, por exemplo, google analytics
+    before_body: assets/hero-image.html #incluir códigos no HEAD do html, por exemplo, google analytics ou hero-image
   config:
     toc:
       collapse: none #subsection, section, none
       scroll_highlight: yes
       before: |
-        <li class="toc-logo"><a href="./"><img src="image/logo.png"></a></li>
+        <li class="toc-logo"><a href="./"><img src="image/ufsc.png"></a></li>
         <li><a href="./">Exemplo bookdown em português</a></li>
       after: |
+        <li class="toc-logo"><a href="./"><img src="image/ufsc.png"></a></li>
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com bookdown</a></li>
     toolbar:
       position: fixed #fixed, static

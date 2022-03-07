@@ -1,12 +1,52 @@
-# Introdução
+
+ Introdução
 
 Primeiro arquivo com o cabeçalho de nível 1 (#) numerado.
 
 ## O início
 
+## Partes e Apêndices
+
+Os capítulos podem ser agrupados em Partes
+
+```
+# (PART) Parte I {-} 
+
+# Capítulo Um
+
+# Capítulo Dois 
+
+# (PART\*) Parte II {-} 
+
+# Capítulo Três
+```
+
+O título da parte deve ser escrito imediatamente antes do primeiro capítulo da parte, no mesmo arquivo .Rmd. Para que a parte não seja numerada, utilize `(PART\*)`
+
+De maneira similar, é possível criar Apêndices:
+
+```
+renv::snapshot()
+
+# (APPENDIX) Apêndices {-} 
+
+# Apêndice A
+
+# Apêndice B
+
+```
+
+Todos os capítulos após cabeçalho são apêndices.
+
+Os apêndices são "numerados" com letras.
+
+
+
+
 
 
 ### Começando...
+
 
 :::cursor
 You use a div tip by writing `:::` following by the name that you assigned to it in the CSS after the `div`.

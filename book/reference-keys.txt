@@ -1,0 +1,17 @@
+fig:gfont1
+fig:gfont2
+o-início
+partes-e-apêndices
+começando
+sumário-table-of-contents---toc
+inserir-imagem-acimaabaixo-do-sumário
+imagem-hero
+texto
+fontes
+selecionando-e-importando-do-google-fonts
+estilizando-o-texto
+links
+notas
+mix
+sumário---toc-table-of-contents
+desdobramento
